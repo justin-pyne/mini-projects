@@ -50,7 +50,7 @@ def hangman():
     if lives == 0:
         print("You lose! The word was:", word)
     else:
-        print("You win!")
+        print("You win! The word was:", word)
         
     
             
