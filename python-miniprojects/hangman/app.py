@@ -3,10 +3,8 @@ import random
 import string
 
 '''
-select random word
-create hangman
-
-
+select random valid 
+create hangman instance
 '''
 
 def get_valid_word(words):
@@ -52,10 +50,5 @@ def hangman():
     else:
         print("You win! The word was:", word)
         
-    
-            
-            
-
-
 
 hangman()
