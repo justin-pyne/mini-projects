@@ -14,4 +14,11 @@ class TicTacToe:
             print()
         
 
-    
+    def available_moves(self):
+        #logic without list comprehension:
+        # moves = []
+        # for (i, x) in enumerate(self.board):
+        #     if x == " ":
+        #         moves.append(i)
+            
+        return [i for (i, x) in enumerate(self.board) if x == " "]
