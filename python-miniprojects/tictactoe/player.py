@@ -45,13 +45,28 @@ class GeniusComputerPlayer(Player):
         if len(game.availablemoves()) == 9:
             square = game.random.choice(game.available_moves())
         else:
-            # use aminimax algorithm to get the best move
+            # use a minimax algorithm to get the best move
             square = self.minimax(game, self.letter)
         return square
     
 
     def minmiax(self, state, player):
+        maxPlayer = self.letter()
+        otherPlayer = 'O' if maxPlayer == 'X' else 'X'
+
+        # base case
+        if state.current_winner == otherPlayer:
+            return {'position' : None,
+                    'score' : 1 * (state.num_empty_squares() + 1) if otherPlayer == maxPlayer else -1 * (state.num_empty_squares() + 1)
+                    }
         
+        elif not state.empty_squares():
+            return {'position' : None, 'score' : 0}
+        
+        # init dicts
+        if player == maxPlayer:
+            best = {}
+
 
     
     
