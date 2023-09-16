@@ -1,4 +1,4 @@
-
+import random
 
 # create a board object to represent a game
 class Board:
@@ -14,8 +14,24 @@ class Board:
 
     def make_new_board(self):
 
-        board = 
+        board = [[None for _ in range(self.dim_size)] for _ in range(self.dim_size)]
 
+        bombs_planted = 0
+        while bombs_planted < self.num_bombs:
+            loc = random.randint(0, self.dim_size**2 - 1)
+            row = loc // self.dim_size
+            col = loc % self.dim_size
+
+            if board[row][col]  == '*':
+                # we already planted a bomb at this location
+                continue
+            else:
+                board[row][col] = '*'
+                bombs_planted += 1
+
+        return board
+    
+    
 
 
 
