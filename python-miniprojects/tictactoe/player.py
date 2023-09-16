@@ -65,7 +65,18 @@ class GeniusComputerPlayer(Player):
         
         # init dicts
         if player == maxPlayer:
-            best = {}
+            best = {'position' : None, 'score' : -math.inf}
+        else:
+            best = {'position' : None, 'score' : math.inf}
+        
+        for possible_move in state.available_moves():
+            # step 1: make a move, try that spot
+
+            # step 2: recurse using minimax to simulate a game after making that move
+
+            # step 3: undo the move
+            
+            # step 4: update the dictionaries if necessary
 
 
     
