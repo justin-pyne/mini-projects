@@ -41,7 +41,17 @@ class GeniusComputerPlayer(Player):
     def __init__(self, letter):
         super().__init__(letter)
 
-    def 
+    def get_move(self, game):
+        if len(game.availablemoves()) == 9:
+            square = game.random.choice(game.available_moves())
+        else:
+            # use aminimax algorithm to get the best move
+            square = self.minimax(game, self.letter)
+        return square
+    
+
+    def minmiax(self, state, player):
+        
 
     
     
