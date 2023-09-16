@@ -37,5 +37,13 @@ class HumanPlayer(Player):
                 print("Invalid square. Try again.")
         return val
     
+class GeniusComputerPlayer(Player):
+    def __init__(self, letter):
+        super().__init__(letter)
+
+    def 
+
+    
+    
 
     
